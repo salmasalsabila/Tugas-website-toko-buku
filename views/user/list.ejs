@@ -1,0 +1,32 @@
+<%- include('../layouts/header.ejs') %>
+<% if (messages.error) { %>
+    <p style = "color: red"><%- messages.error %></p>
+<% } %>
+<% if (messages.success) { %>
+    <p style = "color: green"><%- messages.success %></p>
+<% } %>
+    <div class="container-fluid">
+        <div class="row">
+    <% if (data) { %>
+        <% data.forEach(function(user) { %>
+            <div class="col-md-3">
+                <div class="card" >
+                        <img src="/uploads/sampul/<%= user.sampul %>" height="200" class="card-img-top" alt="<%= user.sampul %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= user.judul %></h5>
+                            <div class="card-body">
+                                <a href="/detail/<%= user._id %>" class="d-inline btn btn-primary">Detail</a>
+                                <a href="/edit/<%= user._id %>" class="d-inline btn btn-warning text-white">Edit</a>
+                                <form class="d-inline " method="post" action='/admin/delete/<%= user._id %>'>
+                                    <input type="submit" name="delete" class="btn btn-danger" value="Delete">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+                <% } %>
+                
+            </div>
+        </div>
