@@ -5,33 +5,39 @@
 <% if (messages.success) { %>
     <p style = "color: green"><%- messages.success %></p>
 <% } %>
-<div class="mt-5 ml-5">
-<form class="ml-5" action="/admin/edit/<%= id %>" method="post" name="form1" enctype="multipart/form-data">
-    <table class="ml-5" width="25%" npnborder="0">
-        <tr class="">
-            <td>Sampul</td>
-            <td><input type="file" name="sampul" value="<%= sampul %>" /></td>
-        </tr>
-        <tr>
-            <td>Judul</td>
-            <td><input class="form-control" type="text" name="judul" value="<%= judul %>" /></td>
-        </tr>
-        <tr>
-            <td>Nama Penerbit</td>
-            <td><input class="form-control" type="text" name="namapenerbit" value="<%= namapenerbit %>" /></td>
-        </tr>
-        <tr>
-            <td>Tahun Terbit</td>
-            <td><input class="form-control" type="text" name="tahunterbit" value="<%= tahunterbit %>" /></td>
-        </tr>
-        <tr>
-            <td>Jumlah Halaman</td>
-            <td><input class="form-control" type="text" name="jumlahhalaman" value="<%= jumlahhalaman %>" /></td>
-        </tr>
-        <tr>
-            <td><input type="hidden" name="_method" value="PUT"></td>
-            <td><input class="btn btn-primary" type="submit" name="Submit" value="Save" /></td>
-        </tr>
-    </table>
-</form>
+<div class=" container mt-5">
+    <div cass="card mt-5">
+        <div class="row ml-5"> 
+            <div class="mt-5"> 
+                <form class="ml-5" action="/admin/edit/<%= id %>" method="post" name="form1" enctype="multipart/form-data">
+                    <table class="ml-5" width="25%" npnborder="0">
+                            <tr>
+                                    <td colspan="2">Sampul</td>
+                                    <td class="col-2"><input class="" type="file" name="sampul" value="<%= sampul %>" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Judul</td>
+                                    <td><input class="form-control " type="text" name="judul" value="<%= judul %>" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Nama Penerbit</td>
+                                    <td><input class="form-control " type="text" name="namapenerbit" value="<%= namapenerbit %>" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Tahun Terbit</td>
+                                    <td ><input class="form-control " type="text" name="tahunterbit" value="<%= tahunterbit %>" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Total Halaman</td>
+                                    <td><input class="form-control" type="text" name="jumlahhalaman" value="<%= jumlahhalaman %>" /></td>
+                                </tr>
+                        <tr>
+                            <td><input type="hidden" name="_method" value="PUT"></td>
+                            <td><input class="btn btn-primary text-center" type="submit" name="Submit" value="Save" /></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
