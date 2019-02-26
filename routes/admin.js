@@ -25,13 +25,13 @@ app.get('/tampil', function(req, res, next){
         if (err) { 
             req.flash('error', err)
             res.render('user/list', {
-                title:'Data Buku Perpustakaan',
+                title:'Data Buku',
                 data: ''
             })
         }else {
             //menampilkan views list.ejs
             res.render('user/list', {
-                title: 'Data Buku Perpustakaan',
+                title: 'Data Buku',
                 data : result
             })
         }
@@ -53,7 +53,7 @@ app.get('/add', function(req, res, next){
 
 //proses input data
 app.post('/add', upload.single('sampul'), function(req, res, next){
-    // req.assert('sampul', 'Sampul is required').notEmpty()
+    //req.assert('sampul', 'Sampul is required').notEmpty()
     req.assert('judul', 'Judul is required').notEmpty()
     req.assert('namapenerbit', 'Nama Penerbit is required').notEmpty()
     req.assert('tahunterbit', 'Tahun Terbit is required').isNumeric()
