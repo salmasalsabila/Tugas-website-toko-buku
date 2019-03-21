@@ -1,0 +1,9 @@
+# Tugas-website-toko-buku
+List Buku
+![alt text](https://github.com/salmasalsabila/Tugas-website-toko-buku/blob/master/read.png)
+Tambah Buku
+![alt text](https://github.com/salmasalsabila/Tugas-website-toko-buku/blob/master/add.png)
+Edit Buku
+![alt text](https://github.com/salmasalsabila/Tugas-website-toko-buku/blob/master/update.png)
+Detail Buku
+![alt text](https://github.com/salmasalsabila/Tugas-website-toko-buku/blob/master/detail.png)
